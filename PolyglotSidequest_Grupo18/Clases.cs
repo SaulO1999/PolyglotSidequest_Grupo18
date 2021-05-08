@@ -41,6 +41,13 @@ namespace PolyglotSidequest_Grupo18
             {
                 return value;
             }
+
+            public virtual void setIntFloat(int n, float r) { }
+
+            public virtual void setIntIntInt(int n1, int n2, int n3) { }
         }
+
+
     }
 }
+
