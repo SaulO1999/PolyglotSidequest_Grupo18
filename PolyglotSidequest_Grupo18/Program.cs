@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace PolyglotSidequest_Grupo18
 {
@@ -6,7 +7,15 @@ namespace PolyglotSidequest_Grupo18
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            float[,] localKs;
+            Vector<float> localBs;
+
+            float[,] K;
+            Vector<float> b;
+            Vector<float> T;
+
+            Console.WriteLine("Implementacion MEF 1D Transferencia Calor con Pesos de Galerkin");
         }
     }
 }
