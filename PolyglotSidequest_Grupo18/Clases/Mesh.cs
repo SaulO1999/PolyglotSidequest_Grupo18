@@ -5,7 +5,7 @@ using System.Text;
 namespace PolyglotSidequest_Grupo18.Clases
 {
     class Mesh
-    {
+    {/*
         protected float[] parameters = new float[3];
         protected int[] sizes = new int[4];
         protected Node[] node_list;
@@ -77,6 +77,6 @@ namespace PolyglotSidequest_Grupo18.Clases
         {
             if (type == SIZES.DIRICHLET) return dirichlet_list[i];
             else return neumann_list[i];
-        }
+        }*/
     }
 }
