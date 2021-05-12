@@ -355,64 +355,6 @@ namespace PolyglotSidequest_Grupo18
             obtenerDatos(ref sr, 1, neltos, 2, ref miselementos);
             obtenerDatos(ref sr, 2, ndirich, 1, ref misdirichlet);
             obtenerDatos(ref sr, 3, nneu, 1, ref misneumann);
-
-            /*
-
-
-
-                Console.WriteLine(input[0]);
-                //while (sr.Peek() > -1)
-                //{
-                //input = sr.ReadLine();
-                //Console.WriteLine(input);
-                //Console.WriteLine(input.Split(' ')[1]);
-
-
-
-
-                //}
-            
-
-            //Se prepara un arreglo para el nombre del archivo
-            char filename[15];
-            //Se prepara un flujo para el archivo
-            ifstream file;
-            
-            
-
-            //Se obliga al usuario a ingresar correctamente el nombre del archivo
-            do
-            {
-                cout << "Ingrese el nombre del archivo que contiene los datos de la malla: ";
-                cin >> filename;
-                //Se intenta abrir el archivo
-                file.open(filename);
-            } while (!file); //Si no fue posible abrir el archivo, se intenta de nuevo
-
-            //Se leen y guardan los parámetros y cantidades
-            file >> l >> k >> Q;
-            file >> nnodes >> neltos >> ndirich >> nneu;
-
-            //Se instancian los parámetros y cantidades en el objeto mesh
-            m.setParameters(l, k, Q);
-            m.setSizes(nnodes, neltos, ndirich, nneu);
-            //En base a las cantidades, se preparan arreglos de objetos para guardar
-            //el resto de la información
-            m.createData();
-
-            //Se extraen, siguiendo el formato del archivo, la información de:
-            //- Los nodos de la malla
-            //- Los elementos de la malla
-            //- Las condiciones de Dirichlet impuestas
-            //- Las condiciones de Neumann impuestas
-            obtenerDatos(file, SINGLELINE, nnodes, INT_FLOAT, m.getNodes());
-            obtenerDatos(file, DOUBLELINE, neltos, INT_INT_INT, m.getElements());
-            obtenerDatos(file, DOUBLELINE, ndirich, INT_FLOAT, m.getDirichlet());
-            obtenerDatos(file, DOUBLELINE, nneu, INT_FLOAT, m.getNeumann());
-
-            //Se cierra el archivo antes de terminar
-            file.close();
-        */
         }
     }
 }

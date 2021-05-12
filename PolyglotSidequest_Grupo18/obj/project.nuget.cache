@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ULBgr8lfsx8NEqFMCDPEh0IBejapQab12IxwYluOM2qH0CU2ZLDy2yOsJwO2MRV3iW2XXjQiXrC6ZfJ/5qNT7w==",
+  "dgSpecHash": "kLz2dE+oETU6au4pF/AybEcwZmoKAlcklONSZnTlpQ0ukoe7cxqL+PuxPOJeRBJIpGoqR7Qq7S4CPIAvbzS5MQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\PolyglotSidequest_Grupo18\\PolyglotSidequest_Grupo18\\PolyglotSidequest_Grupo18.csproj",
+  "projectFilePath": "C:\\Users\\operator\\source\\repos\\PolyglotSidequest_Grupo18\\PolyglotSidequest_Grupo18\\PolyglotSidequest_Grupo18.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512"
+    "C:\\Users\\operator\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512"
   ],
   "logs": []
 }

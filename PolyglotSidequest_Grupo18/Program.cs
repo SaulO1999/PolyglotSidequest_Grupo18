@@ -14,10 +14,10 @@ namespace PolyglotSidequest_Grupo18
     {
         static void Main(string[] args)
         {
-            float[,] localKs;
-            Vector<float> localBs;
+            Matrix<float>[] localKs;
+            Vector<float>[] localBs;
 
-            float[,] K;
+            Matrix<float> K;
             Vector<float> b;
             Vector<float> T;
 
@@ -25,9 +25,20 @@ namespace PolyglotSidequest_Grupo18
 
             Mesh m = new Mesh();
             Tools t = new Tools();
+            Math_tools mt = new Math_tools();
+            Sel s = new Sel();
 
             t.leerMallayCondiciones(ref m);
+            
+            localKs = new Matrix<float>[m.getElements().Length];
+            localBs = new Vector<float>[m.getElements().Length];
+            K = Matrix<float>.Build.Dense(m.getNodes().Length, m.getNodes().Length);
+            b = Vector<float>.Build.Dense(m.getNodes().Length);
 
+            s.crearSistemaLocales(ref m, ref localKs, ref localBs);
+
+            mt.zeroes(ref K, m.getSize(0));
+            mt.zeroes(ref b, m.getSize(0));
             //Matrix<float> m = Matrix<float>.Build.Random(4,4);
             //Math_tools tool = new Math_tools();
 

@@ -22,7 +22,7 @@ namespace PolyglotSidequest_Grupo18
             }
         }
 
-        void zeroes(ref Vector<float> v, int n)
+        public void zeroes(ref Vector<float> v, int n)
         {
             //Se itera n veces
             for (int i = 0; i < n; i++)
