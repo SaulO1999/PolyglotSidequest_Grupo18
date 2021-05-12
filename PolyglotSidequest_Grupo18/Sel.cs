@@ -18,13 +18,13 @@ namespace PolyglotSidequest_Grupo18
             float k = m.getParameter(1);
             float l = m.getParameter(0);
 
-            row1.Add(k / l);
-            row1.Add(-k / l);
-            row2.Add(-k / l);
-            row2.Add(k / l);
+            float[] aux = { k / l, -k / l };
+            float[] aux2 = { -k / l, k / l };
+            row1.SetValues(aux);
+            row2.SetValues(aux2);
 
-            K.InsertRow(0, row1);
-            K.InsertRow(0, row2);
+            K.SetRow(0, row1);
+            K.SetRow(1, row2);
 
             return K;
         }
@@ -36,8 +36,8 @@ namespace PolyglotSidequest_Grupo18
             float Q = m.getParameter(2);
             float l = m.getParameter(0);
 
-            b.Add(Q * l / 2);
-            b.Add(Q * l / 2);
+            float[] aux = { Q * l / 2, Q * l / 2 };
+            b.SetValues(aux);
 
             return b;
         }
@@ -60,6 +60,7 @@ namespace PolyglotSidequest_Grupo18
             K[index1,index2] += localK.At(0, 1);
             K[index2,index1] += localK.At(1, 0);
             K[index2,index2] += localK.At(1, 1);
+
         }
         void assemblyb(Element e, Vector<float> localb, ref Vector<float> b)
         {
@@ -80,6 +81,7 @@ namespace PolyglotSidequest_Grupo18
                 assemblyb(e, localBs[i], ref b);
 
             }
+
         }
 
         public void applyNeumann(ref Mesh m, ref Vector<float> b)
@@ -100,20 +102,27 @@ namespace PolyglotSidequest_Grupo18
 
                 int index = c.getNode1() - 1;
 
-                K.RemoveRow(index);
+//                K.RemoveColumn(index);
+                K = K.RemoveRow(index);
 
                 if(index == 0)
-                    b = b.SubVector(1, b.Count);
+                    b = b.SubVector(1, b.Count - 1);
                 else
-                    b = b.SubVector(0, b.Count - 1);
+                    b = b.SubVector(0, b.Count - 2);
 
-                for(int row = 0; row < K.RowCount; row++)
+                for(int row = 0; row < K.RowCount - 1 ; row++)
                 {
                     float cell = K.At(row, index);
                     b[row] += -1 * c.getValue() * cell;
                 }
-                    K.RemoveColumn(index);
+                    K = K.RemoveColumn(index);
             }
+            
+            
+            Console.WriteLine("K from Dirich");
+            Console.WriteLine(K);
+            Console.WriteLine("b from Dirich");
+            Console.WriteLine(b);
         }
 
         public void calculate(ref Matrix<float> K, ref Vector<float> b, ref Vector<float> T)

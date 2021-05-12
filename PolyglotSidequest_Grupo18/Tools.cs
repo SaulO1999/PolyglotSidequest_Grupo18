@@ -73,6 +73,8 @@ namespace PolyglotSidequest_Grupo18
                         //file >> e >> r;
                         //Se instancian el entero y el real del objeto actual
                         item_list[i].setIntFloat(e, r);
+                        Console.WriteLine("Writing item list(intfloat) from obtener datos(node)");
+                        Console.WriteLine("Value of node " + item_list[i].getX());
                         break;
                     //Se extraen tres enteros
                     case 2:
@@ -89,6 +91,8 @@ namespace PolyglotSidequest_Grupo18
                         //file >> e1 >> e2 >> e3;
                         //Se instancia los tres enteros en el objeto actual
                         item_list[i].setIntIntInt(e1, e2, e3);
+                        Console.WriteLine("Writing item list(intx3) from obtener datos(node)");
+                        Console.WriteLine(item_list[i].getValue());
                         break;
                 }
             }
@@ -157,6 +161,8 @@ namespace PolyglotSidequest_Grupo18
                         //file >> e >> r;
                         //Se instancian el entero y el real del objeto actual
                         item_list[i].setIntFloat(e, r);
+                        Console.WriteLine("Writing item list(intfloat) from obtener datos(element)");
+                        Console.WriteLine(item_list[i]);
                         break;
                     //Se extraen tres enteros
                     case 2:
@@ -173,6 +179,8 @@ namespace PolyglotSidequest_Grupo18
                         //file >> e1 >> e2 >> e3;
                         //Se instancia los tres enteros en el objeto actual
                         item_list[i].setIntIntInt(e1, e2, e3);
+                        Console.WriteLine("Writing item list(intx3) from obtener datos(element)");
+                        Console.WriteLine(item_list[i]);
                         break;
                 }
             }
@@ -241,6 +249,8 @@ namespace PolyglotSidequest_Grupo18
                         //file >> e >> r;
                         //Se instancian el entero y el real del objeto actual
                         item_list[i].setIntFloat(e, r);
+                        Console.WriteLine("Writing item list(intfloat) from obtener datos(condition)");
+                        Console.WriteLine(item_list[i]);
                         break;
                     //Se extraen tres enteros
                     case 2:
@@ -257,6 +267,8 @@ namespace PolyglotSidequest_Grupo18
                         //file >> e1 >> e2 >> e3;
                         //Se instancia los tres enteros en el objeto actual
                         item_list[i].setIntIntInt(e1, e2, e3);
+                        Console.WriteLine("Writing item list(intx3) from obtener datos");
+                        Console.WriteLine(item_list[i]);
                         break;
                 }
             }

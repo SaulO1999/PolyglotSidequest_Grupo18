@@ -8,8 +8,8 @@ namespace PolyglotSidequest_Grupo18.Clases
     {
         public override void setIntFloat(int identifier, float coordinate)
         {
-            id = identifier;
-            x = coordinate;
+            this.id = identifier;
+            this.x = coordinate;
         }
     }
 }

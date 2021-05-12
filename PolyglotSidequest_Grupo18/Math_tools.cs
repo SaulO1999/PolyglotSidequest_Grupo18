@@ -18,7 +18,7 @@ namespace PolyglotSidequest_Grupo18
                 //Vector<float> row = new Vector<float>(zero,n);
                 //Se ingresa la fila en la matriz
                 M.SetRow(i, row);
-                Console.WriteLine(M.ToString());
+//                Console.WriteLine(M.ToString());
             }
         }
 
