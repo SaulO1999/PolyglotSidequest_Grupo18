@@ -26,3 +26,5 @@ C:\Users\operator\source\repos\PolyglotSidequest_Grupo18\PolyglotSidequest_Grupo
 C:\Users\operator\source\repos\PolyglotSidequest_Grupo18\PolyglotSidequest_Grupo18\bin\Debug\netcoreapp3.1\MathNet.Numerics.dll
 C:\Users\operator\source\repos\PolyglotSidequest_Grupo18\PolyglotSidequest_Grupo18\obj\Debug\netcoreapp3.1\PolyglotSidequest_Grupo18.csproj.CopyComplete
 C:\Users\operator\source\repos\PolyglotSidequest_Grupo18\PolyglotSidequest_Grupo18\obj\Debug\netcoreapp3.1\PolyglotSidequest_Grupo18.genruntimeconfig.cache
+C:\Users\User\source\repos\PolyglotSidequest_Grupo18\PolyglotSidequest_Grupo18\bin\Debug\netcoreapp3.1\MathNet.Numerics.dll
+C:\Users\User\source\repos\PolyglotSidequest_Grupo18\PolyglotSidequest_Grupo18\obj\Debug\netcoreapp3.1\PolyglotSidequest_Grupo18.csproj.CopyComplete

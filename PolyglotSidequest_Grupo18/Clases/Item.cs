@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PolyglotSidequest_Grupo18.Clases
 {
-    class Item
+    public class Item
     {
         protected int id;
         protected float x;

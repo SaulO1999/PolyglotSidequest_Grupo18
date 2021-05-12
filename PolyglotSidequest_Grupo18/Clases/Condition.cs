@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PolyglotSidequest_Grupo18.Clases
 {
-    class Condition : Item
+    public class Condition : Item
     {
         public override void setIntFloat(int id_node, float p_value)
         {

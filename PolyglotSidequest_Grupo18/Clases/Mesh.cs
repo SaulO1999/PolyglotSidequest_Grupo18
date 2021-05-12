@@ -4,8 +4,8 @@ using System.Text;
 
 namespace PolyglotSidequest_Grupo18.Clases
 {
-    class Mesh
-    {/*
+    public class Mesh
+    {
         protected float[] parameters = new float[3];
         protected int[] sizes = new int[4];
         protected Node[] node_list;
@@ -15,68 +15,68 @@ namespace PolyglotSidequest_Grupo18.Clases
 
         public void setParameters(float L, float k, float Q)
         {
-            parameters[PARAMETERS.ELEMENT_LENGTH] = L; //ELEMNT_LENGHT = 0
-            parameters[PARAMETERS.THERMAL_CONDUCTIVITY] = k;
-            parameters[PARAMETERS.HEAT_SOURCE] = Q;
+            parameters[0] = L; //ELEMNT_LENGHT = 0
+            parameters[1] = k;
+            parameters[2] = Q;
         }
 
         public void setSizes(int num_nodes, int num_elements, int num_dirich, int num_neu)
         {
-            sizes[SIZES.NODES] = num_nodes;
-            sizes[SIZES.ELEMENTS] = num_elements;
-            sizes[SIZES.DIRICHLET] = num_dirich;
-            sizes[SIZES.NEUMANN] = num_neu;
+            sizes[0] = num_nodes;
+            sizes[1] = num_elements;
+            sizes[2] = num_dirich;
+            sizes[3] = num_neu;
         }
 
-        int getSize(int s)
+        public int getSize(int s)
         {
             return sizes[s];
         }
 
-        float getParameter(int p)
+        public float getParameter(int p)
         {
             return parameters[p];
         }
 
-        void createData()
+        public void createData()
         {
-            node_list = new Node[sizes[SIZES.NODES]];
-            element_list = new Element[sizes[SIZES.ELEMENTS]];
-            dirichlet_list = new Condition[sizes[SIZES.DIRICHLET]];
-            neumann_list = new Condition[sizes[SIZES.NEUMANN]];
+            node_list = new Node[sizes[0]];
+            element_list = new Element[sizes[1]];
+            dirichlet_list = new Condition[sizes[2]];
+            neumann_list = new Condition[sizes[3]];
         }
 
-        Node[] getNodes()
+        public Node[] getNodes()
         {
             return node_list;
         }
-        Element[] getElements()
+        public Element[] getElements()
         {
             return element_list;
         }
-        Condition[] getDirichlet()
+        public Condition[] getDirichlet()
         {
             return dirichlet_list;
         }
-        Condition[] getNeumann()
+        public Condition[] getNeumann()
         {
             return neumann_list;
         }
 
-        Node getNode(int i)
+        public Node getNode(int i)
         {
             return node_list[i];
         }
 
-        Element getElement(int i)
+        public Element getElement(int i)
         {
             return element_list[i];
         }
 
-        Condition getCondition(int i, int type)
+        public Condition getCondition(int i, int type)
         {
-            if (type == SIZES.DIRICHLET) return dirichlet_list[i];
+            if (type == 2) return dirichlet_list[i];
             else return neumann_list[i];
-        }*/
+        }
     }
 }

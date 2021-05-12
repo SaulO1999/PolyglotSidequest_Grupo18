@@ -14,7 +14,7 @@ namespace PolyglotSidequest_Grupo18
     {
         static void Main(string[] args)
         {
-            /*float[,] localKs;
+            float[,] localKs;
             Vector<float> localBs;
 
             float[,] K;
@@ -23,11 +23,15 @@ namespace PolyglotSidequest_Grupo18
 
             Console.WriteLine("Implementacion MEF 1D Transferencia Calor con Pesos de Galerkin");
 
-            Mesh m;*/
-            Matrix<float> m = Matrix<float>.Build.Random(4,4);
-            Math_tools tool = new Math_tools();
+            Mesh m = new Mesh();
+            Tools t = new Tools();
 
-            tool.zeroes(ref m, 4);
+            t.leerMallayCondiciones(ref m);
+
+            //Matrix<float> m = Matrix<float>.Build.Random(4,4);
+            //Math_tools tool = new Math_tools();
+
+            //tool.zeroes(ref m, 4);
         }
     }
 }

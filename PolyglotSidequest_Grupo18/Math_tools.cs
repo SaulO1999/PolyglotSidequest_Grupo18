@@ -37,7 +37,7 @@ namespace PolyglotSidequest_Grupo18
             A.CopyTo(copy);
         }
 
-        void productMatrixVector(Matrix<float> A, Vector<float> v,ref Vector<float> R)
+        void productMatrixVector(Matrix<float> A, Vector<float> v, ref Vector<float> R)
         {
             for (int f = 0; f < A.RowCount; f++)
             {
@@ -46,7 +46,7 @@ namespace PolyglotSidequest_Grupo18
                 //Se calcula el valor de la celda de acuerdo a la formulación
                 for (int c = 0; c < v.Count; c++)
                 {
-                    cell += A.At(f,c) * v.At(c);
+                    cell += A.At(f, c) * v.At(c);
                 }
                 //Se coloca el valor calculado en su celda correspondiente en la respuesta
                 R[f] += cell;
@@ -63,18 +63,14 @@ namespace PolyglotSidequest_Grupo18
         {
             //Se elimina la fila i
             //M.erase(M.begin() + i); //Uso de begin para obtener un iterator a la posición de interés
-                                    //Se recorren las filas restantes
+            //Se recorren las filas restantes
             M.RemoveRow(i);
             M.RemoveColumn(j);
             //for (int i = 0; i < M.RowCount; i++)
-                //En cada fila se elimina la columna j
-                //M.at(i).erase(M.at(i).begin() + j);
-                
-        }
-
-        float determinant(Matrix M)
-        {
+            //En cada fila se elimina la columna j
+            //M.at(i).erase(M.at(i).begin() + j);
 
         }
+    }
 }
 

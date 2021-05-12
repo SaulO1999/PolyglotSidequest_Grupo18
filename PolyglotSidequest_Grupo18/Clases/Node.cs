@@ -4,12 +4,12 @@ using System.Text;
 
 namespace PolyglotSidequest_Grupo18.Clases
 {
-    class Node : Item
+    public class Node : Item
     {
-        public override void setIntFloat(int identifier, float coordiante)
+        public override void setIntFloat(int identifier, float coordinate)
         {
             id = identifier;
-            x = coordiante;
+            x = coordinate;
         }
     }
 }
