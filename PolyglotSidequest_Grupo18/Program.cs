@@ -34,11 +34,21 @@ namespace PolyglotSidequest_Grupo18
             localBs = new Vector<float>[m.getElements().Length];
             K = Matrix<float>.Build.Dense(m.getNodes().Length, m.getNodes().Length);
             b = Vector<float>.Build.Dense(m.getNodes().Length);
+            T = Vector<float>.Build.Dense(m.getNodes().Length);
+
 
             s.crearSistemaLocales(ref m, ref localKs, ref localBs);
 
             mt.zeroes(ref K, m.getSize(0));
             mt.zeroes(ref b, m.getSize(0));
+
+            s.ensamblaje(ref m, ref localKs, ref localBs, ref K, ref b);
+
+            s.applyNeumann(ref m, ref b);
+
+            s.applyDirichlet(ref m, ref K, ref b);
+
+            mt.zeroes(ref T, b.Count);
             //Matrix<float> m = Matrix<float>.Build.Random(4,4);
             //Math_tools tool = new Math_tools();
 
