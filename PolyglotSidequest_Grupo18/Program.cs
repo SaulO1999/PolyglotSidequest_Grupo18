@@ -49,10 +49,13 @@ namespace PolyglotSidequest_Grupo18
             s.applyDirichlet(ref m, ref K, ref b);
 
             mt.zeroes(ref T, b.Count);
-            //Matrix<float> m = Matrix<float>.Build.Random(4,4);
-            //Math_tools tool = new Math_tools();
 
-            //tool.zeroes(ref m, 4);
+            s.calculate(ref K, ref b, ref T);
+
+            Console.WriteLine("La respuesta es: \n");
+            Console.WriteLine(T);
+
+            return;
         }
     }
 }

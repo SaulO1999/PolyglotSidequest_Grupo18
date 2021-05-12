@@ -115,5 +115,13 @@ namespace PolyglotSidequest_Grupo18
                     K.RemoveColumn(index);
             }
         }
+
+        public void calculate(ref Matrix<float> K, ref Vector<float> b, ref Vector<float> T)
+        {
+            Matrix<float> Kinv = K.Inverse();
+
+            Math_tools mt = new Math_tools();
+            mt.productMatrixVector(Kinv, b,ref T);
+        }
     }
 }

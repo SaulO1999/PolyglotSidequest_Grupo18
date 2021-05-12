@@ -37,7 +37,7 @@ namespace PolyglotSidequest_Grupo18
             A.CopyTo(copy);
         }
 
-        void productMatrixVector(Matrix<float> A, Vector<float> v, ref Vector<float> R)
+        public void productMatrixVector(Matrix<float> A, Vector<float> v, ref Vector<float> R)
         {
             for (int f = 0; f < A.RowCount; f++)
             {
